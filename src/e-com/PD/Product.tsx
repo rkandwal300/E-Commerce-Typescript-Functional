@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 type Product = {
-  photo : string | null, title  ?: string | null , id  ?: number | null , price   ?: string | null , rating ?: number | null 
+  photo : string , title  : string , id  : number , price   : string  , rating : number | null 
 }
 
 const Product :FC<Product> = ( {photo , title , id , price  , rating }) => {
