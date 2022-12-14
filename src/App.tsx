@@ -1,25 +1,12 @@
-import { useState } from 'react'
-import ToDo1 from './Todo_List/ToDo1'
+import React from 'react'
+import ECom from './e-com/ECom';
 
 
+const  App = () => {
 
-
-function App() {
-
-
-  return (
-   
-    <div className="App">
-      <ToDo1  />
-     
-
-
-
-
-
-
-    </div>
-  )
+return (
+        <ECom />
+      )
 }
 
-export default App
+export default App;
