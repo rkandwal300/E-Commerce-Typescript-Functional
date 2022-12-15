@@ -1,4 +1,4 @@
-// YourComponent.stories.ts|tsx
+//  YourComponent.stories.ts|tsx
 
 import React from 'react';
 
@@ -19,11 +19,11 @@ export default {
     } ,
     price :  {
       options : [ '39' , ' 49' , " 59 "],
-      control : { type : 'select'},
+      control : { type : 'radio'},
     } ,
     id :  {
       options : [ '39' , ' 49' , " 59 "],
-      control : { type : 'radio'},
+      control : { type : 'select'},
     } ,
     rating :  {
       // options : [ '39' , ' 49' , " 59 "],
@@ -40,5 +40,6 @@ export const FirstStory = Template.bind({});
 FirstStory.args = {
     photo : 'https://trycasuals.com/wp-content/uploads/2018/06/mug-white-4-300x300.jpg' ,
     title : ' Coffee Mug ' ,
-    price : '39' ,
+    price : '39',
 };
+// 

@@ -45,6 +45,8 @@ export const  cartContext   = (ids : number[]) =>{
 // single product data 
 
 export function getSingleProduct(id : number ) {
+    console.log ( ' id = ' ,id)
+    console.log ( ' id type = ' ,typeof(id))
     return axios.get("https://myeasykart.codeyogi.io/product/" + id).then(function (response :any) {
         return response.data;
     }).catch((e :any)=>{

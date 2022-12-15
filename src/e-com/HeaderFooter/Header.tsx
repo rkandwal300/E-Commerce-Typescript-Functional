@@ -132,9 +132,9 @@ const Headerr = () => {
             <Link to= '/carts' className='  cursor-pointer   items-center   hover:text-red-400 ml-[100px] mb-5 relative left-[-60px] top-[-20px] md:left-[-60px]  md:top-[-10px] '>
 
 
-                            <div className=' rotate-180 relative top-3 left-[-13px] text-lg text-red-500 font-semibold  rounded-full relz '> U</div>
+                            <div className=' rotate-180 relative top-3 left-[-9px] text-lg text-red-500 font-semibold  rounded-full '> U</div>
 
-                            <div className=  'text-red-500 font-semibold   hover:text-black hover:bg-red-500 rounded-b-[17%]  px-2 py-0 border-[3px]  cart border-red-500  text-sm        '     >  {total} </div>
+                            <div className=  'text-red-500 font-semibold   hover:text-black hover:bg-red-500 rounded-b-[17%]  px-2 py-0 border-[3px]  cart border-red-500  text-sm   min-w[60px]     '     >  {total} </div>
 
                             </Link>
 

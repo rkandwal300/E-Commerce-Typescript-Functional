@@ -145,14 +145,14 @@ const PDListPage = () => {
 
         data &&   data.map((val :valtype )=>{
 
-            return  <Product 
-                    key={val.id}  
+            return ( <Link to= {'/products/'+ val.id } key={val.id}    >  
+                    <Product 
                     photo ={val.thumbnail}   
                     title ={val.title}  
                     id ={val.id} 
                     price={val.price} 
-                    rating ={val.rating} />
-
+                    rating ={val.rating} /></Link>
+            )
 
 
             })

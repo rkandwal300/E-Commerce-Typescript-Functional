@@ -16,3 +16,7 @@ module.exports = {
     "storyStoreV7": true
   }
 }
+
+module.exports = {
+  addons: ['@storybook/addon-links'],
+};

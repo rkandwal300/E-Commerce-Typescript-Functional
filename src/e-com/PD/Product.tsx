@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { AiOutlineStar } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 
 
@@ -10,8 +10,8 @@ type Product = {
 
 const Product :FC<Product> = ( {photo , title , id , price  , rating }) => {
   return (
+    <div >
     <div>
-    <Link to= {'/products/'+ id  }>
       <div id={'a'+id} className=' h-fit  max-w-[258px] mx-[10px] hover:cursor-pointer ' >
         <div className='aspect-square max-w-[258px] overflow-hidden flex bg-contain  my-2   shadow-md '>
           <img className=" w-full  object-cover" src={photo} alt ='photo' width='100%' />
@@ -34,9 +34,9 @@ const Product :FC<Product> = ( {photo , title , id , price  , rating }) => {
               <div className='h-[22px]  w-[258px] text-base  font-semibold   '> 	&#8377;	{price} </div>
         </div>
       </div>
-    </Link>
+    </div>
     </div>
   )
 }
 
-export default Product;
+export default  Product ;

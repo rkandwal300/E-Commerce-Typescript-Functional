@@ -22,10 +22,10 @@ type valtype = {
   thumbnail  : string ,
 }
 interface ProductDetailType {
-    story ? :boolean ;
+    story ? : number ;
 }
 
-const ProductDetail :FC <ProductDetailType> = ({story}) => {
+const ProductDetail :FC <ProductDetailType> = () => {
   const {  setAlertData  } = useContext(AlertContext) ;
 
   const { addToCart } = useContext(cartDataContext);
@@ -61,6 +61,7 @@ const handleAddCart = ()=>{
 
 
 useEffect(()=>{
+  console.log ( ' useEffect id = ',id)
 
   // maindata
   getSingleProduct( id).then((response)=>{

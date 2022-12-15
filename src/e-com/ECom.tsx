@@ -13,6 +13,7 @@ import Home from './PD/Home';
 import Auth from './Authentication/Auth';
 import { UserState } from './Context/UserContext';
 import Error from './Error_&_Loading/Error';
+import Product from './PD/Product';
 
 
 const ECom = () => {
@@ -26,10 +27,11 @@ const ECom = () => {
 
 
 
-    
-    <Headerr/>
+    <Headerr/> 
+
 
     <Routes>
+
     
 
     <Route path='/' element={<Home />} />
