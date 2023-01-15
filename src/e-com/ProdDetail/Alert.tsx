@@ -1,6 +1,6 @@
 import React ,{useState , useContext , useEffect} from 'react'
 import { AiOutlineCheckCircle, AiFillCheckCircle , AiFillInfoCircle } from "react-icons/ai";
-import { FcCancel  } from "react-icons/Fc";
+import { FcCancel  } from "react-icons/fc";
 import { AlertContext } from '../Context/AlertContext';
 
 const Alert = () => {
