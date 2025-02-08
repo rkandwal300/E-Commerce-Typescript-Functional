@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import Footer from '../components/shared/Footer/Footer';
 import Header from '../components/shared/Header/Header';
 import PDListPage from './/PD/PDListPage';
 import About from './About-Contact/About';
@@ -9,7 +10,6 @@ import AlertState from './Context/AlertContext';
 import { CartState } from './Context/CartContext';
 import { UserState } from './Context/UserContext';
 import Error from './Error_&_Loading/Error';
-import Footer from './HeaderFooter/Footer';
 import Home from './PD/Home';
 import ProductDetail from './ProdDetail/ProductDetail';
 

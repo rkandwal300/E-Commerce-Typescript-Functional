@@ -58,3 +58,9 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+/* @utilities {
+  * {
+    @apply selection: bg-pink-400 m-0 p-0
+  }
+} */
