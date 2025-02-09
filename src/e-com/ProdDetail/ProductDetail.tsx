@@ -10,9 +10,10 @@ import Alert from './Alert';
 
 interface ProductDetailType {
   story?: number;
+  productId?: number;
 }
 
-const ProductDetail: FC<ProductDetailType> = () => {
+const ProductDetail: FC<ProductDetailType> = ({ productId }) => {
   const { setAlertData } = useContext(AlertContext);
 
   const { addToCart } = useContext(cartDataContext);
@@ -20,9 +21,8 @@ const ProductDetail: FC<ProductDetailType> = () => {
   type idParams = {
     id: string;
   };
-
-  const id = Number(useParams<idParams>().id);
-  // const Id = + id;
+  const paramProductId = Number(useParams<idParams>().id);
+  const id = productId ?? paramProductId;
 
   const [data, setData] = useState<TProduct>();
   const [RelatedData, setRelatedData] = useState<TProduct[]>();
