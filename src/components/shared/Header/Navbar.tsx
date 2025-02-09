@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   HoverCard,
   HoverCardContent,
@@ -22,13 +22,23 @@ interface Props {
   subRoutes: Route[];
 }
 const Navbar = ({ routes, subRoutes }: Readonly<Props>) => {
+  const location = useLocation();
+  const selectedRoute = routes.find(
+    (route) => route.path === location.pathname
+  );
+
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
         {routes.map((val) => (
           <NavigationMenuItem key={val.id}>
             <Link to={val.path}>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  val.path === selectedRoute?.path ? 'text-primary' : ''
+                )}
+              >
                 {val.label}
               </NavigationMenuLink>
             </Link>

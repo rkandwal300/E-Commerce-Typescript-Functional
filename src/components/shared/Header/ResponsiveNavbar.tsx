@@ -1,7 +1,8 @@
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Route } from './Header';
 import HeaderCart from './HeaderCart';
 interface Props {
@@ -12,6 +13,10 @@ export default function ResponsiveNavbar({
   routes,
   subRoutes,
 }: Readonly<Props>) {
+  const location = useLocation();
+  const selectedRoute = routes.find(
+    (route) => route.path === location.pathname
+  );
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -26,8 +31,10 @@ export default function ResponsiveNavbar({
               key={val.id}
               className={buttonVariants({
                 variant: 'ghost',
-                className:
+                className: cn(
                   'hover:text-primary text-muted-foreground underline-offset-4 hover:underline border-b h-16',
+                  selectedRoute?.path === val.path ? 'text-primary' : ''
+                ),
               })}
             >
               <Link to={val.path}>{val.label}</Link>

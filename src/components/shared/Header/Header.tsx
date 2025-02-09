@@ -1,3 +1,4 @@
+import { Separator } from '@radix-ui/react-separator';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import ResponsiveNavbar from './ResponsiveNavbar';
@@ -29,13 +30,16 @@ const routes: Route[] = [
 ];
 const Header = () => {
   return (
-    <div className="flex gap-4 justify-between items-center px-10 py-4 ">
-      <Link to="/">
-        <img src="logo.png" width="80" height="20" alt="logo" />
-      </Link>
-      <Navbar routes={routes} subRoutes={subRoutes} />
-      <ResponsiveNavbar routes={routes} subRoutes={subRoutes} />
-    </div>
+    <section className="flex flex-1 z-50 w-full flex-col sticky top-0 bg-background ">
+      <div className="flex gap-4 justify-between items-center px-10 py-4 ">
+        <Link to="/">
+          <img src="logo.png" width="80" height="20" alt="logo" />
+        </Link>
+        <Navbar routes={routes} subRoutes={subRoutes} />
+        <ResponsiveNavbar routes={routes} subRoutes={subRoutes} />
+      </div>
+      <Separator className="bg-primary h-1 w-40 translate-x-4" />
+    </section>
   );
 };
 

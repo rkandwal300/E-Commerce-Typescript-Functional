@@ -1,7 +1,8 @@
+import PDListPage from '@/components/shared/Product/PDListPage';
 import { Route, Routes } from 'react-router-dom';
 import Footer from '../components/shared/Footer/Footer';
 import Header from '../components/shared/Header/Header';
-import PDListPage from './/PD/PDListPage';
+import Home from '../components/shared/Home/Home';
 import About from './About-Contact/About';
 import Contact from './About-Contact/Contact';
 import Auth from './Authentication/Auth';
@@ -10,7 +11,6 @@ import AlertState from './Context/AlertContext';
 import { CartState } from './Context/CartContext';
 import { UserState } from './Context/UserContext';
 import Error from './Error_&_Loading/Error';
-import Home from './PD/Home';
 import ProductDetail from './ProdDetail/ProductDetail';
 
 const ECom = () => {
